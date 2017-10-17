@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+
+
+
+
+
+
+    <head>
+
+
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> <!--iso-8859-1" />-->
+
+
+
+        <meta http-equiv="Content-Language" content="en-us" />
+
+
+
+
+
+
+
+        <meta name = "author" content="Aiga"/>
+
+        <meta name ="copyright" content="&copy; 2010 AIGA "/> 
+
+        <meta name="description" content="AIGA - Student Portfolio" />
+
+        <meta name="keywords" content="AIGA - Student Portfolio; " />
+
+        <meta name="robots" content="index,follow" />
+
+        <meta http-equiv="expires" content="Fri, 26 Feb 2001 09:23:47 GMT"/> 
+
+
+
+        <title>Dangerous Dave | Rahul Bethi</title>
+
+
+
+        <link href="layout.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+
+    </head>
+
+
+
+
+
+
+
+    <body>
+
+
+
+
+
+        <div id="AigaMasthead">
+
+        </div>
+
+
+
+        <div id="container">
+
+
+
+            <div id="content"> 
+
+
+
+
+
+                <canvas id="myCanvas" width="640" height="400"></canvas>
+
+                <!-- introduce the flash game in here  -->
+
+
+
+                <script>
+                    var canvas = document.getElementById("myCanvas");
+                    var ctx    = canvas.getContext("2d");
+
+                    var g_gamePaused = true;
+                </script>
+                <script src = "gui.js"></script>
+                <script src = "main.js"></script>
+
+                <h3>Author:<br /><br />Rahul Bethi</h3>
+
+
+
+                <br /><br /><br />
+
+
+
+
+
+                <h3>Objective:</h3>
+
+
+                <ul>
+
+                    <li>The objective of the game is to collect the shimmering challice and reach the door.</li>
+
+                    <li>Dave can move forwards and backwards using the arrow keys, he can jump and fall with an acceleration due to gravity.</li>
+
+                    <li>Dave can shoot bullets in the direction he faces. He has to shoot the monster which comes in his way.</li>
+
+                    <li>Dave dies, when struck by monster bullets, or when he doesnt land up on a solid tile, or when he bumps into the monster.</li>
+
+                    <li>The game completes when Dave reaches the door.</li>
+                    
+                    <li>Dave can collect Jewels of different colors to get different scores.</li>
+
+
+                </ul>
+
+                <br /><br />
+                
+                
+                <h3>How To Play:</h3>
+
+                <ul>
+
+                    <li>Move left and right using the 'Left' and 'Right' arrow keys.</li>
+
+                    <li>Jump using the 'Up' arrow key.</li>
+
+                    <li>Shoot using the 'Alt' key, once Dave acquires a gun.</li>
+
+                </ul>
+
+                <br /><br />
+
+
+                <h3>Logic Design and Implementation:</h3> 
+
+                <ul>
+                    <li>Create Level class, which comprises of a Bitmap, each number represents the position of different objects (red bricks, weed, gun, door, challice, fire, water, jewels (blue and red diamonds, purple stone)) in the level.</li>
+
+                    <li>Use Sprites to create movement, jumping and death animations of all animating objects (Dave, weed, fire, water, enemy, enemy-bullet, challice).</li>
+
+                    <li>Create logics for detecting collisions between dave and other objects around him by determining in which location he is in the Level Bitmap.</li>
+
+                    <li>Create jumping logics in order to determine the jumping and falling speeds of Dave when he freely falls under gravity.</li>
+
+                    <li>Scroll the environment according to the position of Dave.</li>
+
+                    <li>Create variables to hold the score and the number of lives of Dave.</li>
+
+                    <li>Create logics to determine when the game is over.</li>
+
+                </ul></ul></ul>
+
+        </p>
+
+    <br /><br /></br>
+
+<h3>Scope for improvement:</h3>
+
+<ul><li>Implement Jetpack power-up.</ul>
+
+<ul><li>Implement smooth scrolling depending on the Dave position.</ul>
+
+<ul><li>Implement Audio to the game.</ul>
+
+
+
+
+
+</div> 
+
+
+
+<!--content-->
+
+
+
+
+
+
+
+</div> <!-- Container ends here -->
+
+
+
+
+
+
+
+<!--  Footer -->
+
+
+
+
+
+
+
+<div id="info-site">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

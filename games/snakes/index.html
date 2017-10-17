@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+
+
+
+
+
+
+    <head>
+
+
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> <!--iso-8859-1" />-->
+
+
+
+        <meta http-equiv="Content-Language" content="en-us" />
+
+
+
+
+
+
+
+        <meta name = "author" content="Aiga"/>
+
+        <meta name ="copyright" content="&copy; 2010 AIGA "/> 
+
+        <meta name="description" content="AIGA - Student Portfolio" />
+
+        <meta name="keywords" content="AIGA - Student Portfolio; " />
+
+        <meta name="robots" content="index,follow" />
+
+        <meta http-equiv="expires" content="Fri, 26 Feb 2001 09:23:47 GMT"/> 
+
+
+
+        <title>Snakes | Rahul Bethi</title>
+
+
+
+        <link href="layout.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+
+    </head>
+
+
+
+
+
+
+
+    <body>
+
+
+
+
+
+        <div id="AigaMasthead">
+
+        </div>
+
+
+
+        <div id="container">
+
+
+
+            <div id="content"> 
+
+
+
+
+
+                <canvas id="myCanvas" width="720" height="720"></canvas>
+
+                <!-- introduce the flash game in here  -->
+
+
+
+                <script type="text/javascript" src="scripts/main.js"       ></script>
+                <script type="text/javascript" src="scripts/GUI.js"        ></script>
+                <script type="text/javascript" src="scripts/input.js"      ></script>
+                <script type="text/javascript" src="scripts/stats.js"      ></script>
+                <script type="text/javascript" src="scripts/powerUps.js"   ></script>
+                <script type="text/javascript" src="scripts/nodes.js"      ></script>
+                <script type="text/javascript" src="scripts/snakes.js"     ></script>
+                <script type="text/javascript" src="scripts/connections.js"></script>
+                <script type="text/javascript" src="scripts/gameLoop.js"   ></script>
+
+                <h3>Author:<br /><br />Rahul Bethi</h3>
+
+
+
+                <br /><br /><br />
+
+
+
+
+
+                <h3>Objective:</h3>
+
+
+                <ul>
+
+                    <li>The objective of the game is to acquire the Power-ups by moving the Snake and reach the score of 1000 first.</li>
+
+                    <li>The Snake can be moved in 8 directions using single/multiple arrow keys.</li>
+
+                    <li>The speed and length of the Snake varies depending upon the powerups acquired.</li>
+
+                    <li>The Snake dies if it hits the wall or another Snake.</li>
+                    
+                    <li>If both the heads of the Snakes hit eachother, then both loose.</li>
+
+
+                </ul>
+
+                <br /><br />
+                
+                <h3>How To Play:</h3>
+
+
+                <ul>
+
+                    <li>Arrow keys, to move the Left Snake.</li>
+
+                    <li>W S A D keys, to move the Right Snake.</li>
+
+                </ul>
+
+                <br /><br />
+
+
+                <h3>Logic Design and Implementation:</h3> 
+
+                <ul>
+                    <li>Create Snake class, which comprises of an array of square objects(nodes) to constitute the Snake body.</li>
+
+                    <li>Create another two arrays to store x and y coordinates such that they keep track of each pixel of each square node constituting the Snake body, so that using these arrays, the snake can be moved at any desired speed.</li>
+
+                    <li>Create movement logic, such that on pressing the required keys or the combination of those keys, vertical, horizontal or diagonal movement can be obtained.</li>
+                    
+                    <li>Only the head of the snake (first node) reacts to the input creating n last positions while it moves.</li>
+                    
+                    <li>Create logic so that the snake cannot go backwards onto itself by checking the position of the second node.</li>
+                    
+                    <li>Each node will moving to the next node's 'n'th last position. 'n' depends on the size of each node.</li>
+
+                    <li>Create variables to hold the score, speed and number of nodes of a snake.</li>
+
+                    <li>Create logics to determine when the game is over and display it on the screen.</li>
+
+</ul></ul></ul>
+
+</p>
+
+<br /><br /></br>
+
+<h3>Scope for improvement:</h3>
+
+<ul><li>Implement more varieties of power-ups like making the snake immune for some time using a timer.</ul>
+
+<ul><li>Implement logic for the snake to go and come from one side to the other side like teleporting.</ul>
+
+<ul><li>Implement Audio to the game.</ul>
+
+
+
+
+
+</div> 
+
+
+
+<!--content-->
+
+
+
+
+
+
+
+</div> <!-- Container ends here -->
+
+
+
+
+
+
+
+<!--  Footer -->
+
+
+
+
+
+
+
+<div id="info-site">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

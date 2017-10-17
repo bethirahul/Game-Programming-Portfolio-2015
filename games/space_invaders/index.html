@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+
+
+
+
+
+
+    <head>
+
+
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> <!--iso-8859-1" />-->
+
+
+
+        <meta http-equiv="Content-Language" content="en-us" />
+
+
+
+
+
+
+
+        <meta name = "author" content="Aiga"/>
+
+        <meta name ="copyright" content="&copy; 2010 AIGA "/> 
+
+        <meta name="description" content="AIGA - Student Portfolio" />
+
+        <meta name="keywords" content="AIGA - Student Portfolio; " />
+
+        <meta name="robots" content="index,follow" />
+
+        <meta http-equiv="expires" content="Fri, 26 Feb 2001 09:23:47 GMT"/> 
+
+
+
+        <title>Space Invaders | Rahul Bethi</title>
+
+
+
+        <link href="layout.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+
+    </head>
+
+
+
+
+
+
+
+    <body>
+
+
+
+
+
+        <div id="AigaMasthead">
+
+        </div>
+
+
+
+        <div id="container">
+
+
+
+                <canvas id="myCanvas" width="1024" height="768"></canvas>
+
+                <!-- introduce the flash game in here  -->
+
+                <script>
+                    var canvas = document.getElementById("myCanvas");
+                    var ctx    = canvas.getContext("2d");
+                </script>
+                <script src="assets/objects.js"></script>
+                <script src="assets/collision.js"></script>
+                <script src="assets/gui.js"></script>
+                <script src="main.js"></script>
+
+                
+
+
+            <div id="content">
+                
+                <h3>Author:<br /><br />Rahul Bethi</h3>
+
+
+
+                <br /><br /><br />
+
+                <h3>Objective:</h3>
+
+
+                <ul>
+
+                    <li>The objective of the game is to shoot the aliens aproaching downwards, and dodge the bullets they shoot at you.</li>
+
+                    <li>The barriers, when struck by both player bullets or enemy bullets gets damaged until completely destroyed.</li>
+
+                    <li>The Player ship gets destroyedwhen it is struck by the enemy bullets.</li>
+
+                    <li>The Player gets bonus points on shooting the Red Alien Space Ship on the top.</li>
+                    
+                    <li>Game is Won by destroying all the enemy ships down.</li>
+                    
+                    <li>Game is Over when player is out of lives or if the enemies reach the player.</li>
+                    
+                    <li>Speed and frequency of enemy firing the bullets will increase as the enemies comes down.</li>
+
+
+                </ul>
+
+                <br /><br />
+                
+                <h3>How To Play:</h3>
+
+
+                <ul>
+
+                    <li>The Player ship can be moved left and right using the respective 'Left' and 'Right' arrow keys.</li>
+
+                    <li>Shoot bullets from the player ship using the 'Alt' key.</li>
+
+
+                </ul>
+
+                <br /><br />
+
+
+                <h3>Logic Design and Implementation:</h3> 
+
+                <ul>
+                    <li>The whole game is constructed using the Bitmaps and square blocks</li>
+
+                    <li>Player, enemies and enemy bullets have bitmaps, which change accordingly to show animation.</li>
+                    
+                    <li>Square blocks are drawn in place of '1' and nothing in place of '0' in the bitmap.</li>
+
+                    <li>Even the Score numbers are drawn using the bitmaps.</li>
+
+                    <li>Barriers take few bullets to get completly damaged, thus protecting the player from enemy bullets.</li>
+
+                    <li>Bullet class is created and the bullets are reused by activating and deactivationg them, making the game efficient.</li>
+                    
+                    <li>Enemies movement logic is created along with their animation.</li>
+                    
+                    <li>Speed is common for all enemies, and this speed is increased as the time goes on. so that enemies become faster and frequency at which they fire increases.</li>
+                    
+                    <li>Bitmap of Barrier is altered to show damage.</li>
+
+                </ul></ul></ul>
+
+        </p>
+
+    <br /><br /></br>
+
+<h3>Scope for improvement:</h3>
+
+<ul><li> Implement Audio to the game.</ul>
+
+
+
+
+
+</div> 
+
+
+
+<!--content-->
+
+
+
+
+
+
+
+</div> <!-- Container ends here -->
+
+
+
+
+
+
+
+<!--  Footer -->
+
+
+
+
+
+
+
+<div id="info-site">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

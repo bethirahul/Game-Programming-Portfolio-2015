@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+
+
+
+
+
+
+    <head>
+
+
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> <!--iso-8859-1" />-->
+
+
+
+        <meta http-equiv="Content-Language" content="en-us" />
+
+
+
+
+
+
+
+        <meta name = "author" content="Aiga"/>
+
+        <meta name ="copyright" content="&copy; 2010 AIGA "/> 
+
+        <meta name="description" content="AIGA - Student Portfolio" />
+
+        <meta name="keywords" content="AIGA - Student Portfolio; " />
+
+        <meta name="robots" content="index,follow" />
+
+        <meta http-equiv="expires" content="Fri, 26 Feb 2001 09:23:47 GMT"/> 
+
+
+
+        <title>PacMan | Rahul Bethi</title>
+
+
+
+        <link href="layout.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+
+    </head>
+
+
+
+
+
+
+
+    <body>
+
+
+
+
+
+        <div id="AigaMasthead">
+
+        </div>
+
+
+
+        <div id="container">
+
+
+
+            <div id="content"> 
+
+
+
+                <!-- introduce the flash game in here  -->
+
+
+
+                <div id="flashContent">
+                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="595" height="695" id="pacman" align="middle">
+                        <param name="movie" value="pacman.swf" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#000000" />
+                        <param name="play" value="true" />
+                        <param name="loop" value="true" />
+                        <param name="wmode" value="window" />
+                        <param name="scale" value="showall" />
+                        <param name="menu" value="true" />
+                        <param name="devicefont" value="false" />
+                        <param name="salign" value="" />
+                        <param name="allowScriptAccess" value="sameDomain" />
+                        <!--[if !IE]>-->
+                        <object type="application/x-shockwave-flash" data="pacman.swf" width="595" height="695">
+                            <param name="movie" value="pacman.swf" />
+                            <param name="quality" value="high" />
+                            <param name="bgcolor" value="#000000" />
+                            <param name="play" value="true" />
+                            <param name="loop" value="true" />
+                            <param name="wmode" value="window" />
+                            <param name="scale" value="showall" />
+                            <param name="menu" value="true" />
+                            <param name="devicefont" value="false" />
+                            <param name="salign" value="" />
+                            <param name="allowScriptAccess" value="sameDomain" />
+                            <!--<![endif]-->
+                            <a href="http://www.adobe.com/go/getflash">
+                                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+                            </a>
+                            <!--[if !IE]>-->
+                        </object>
+                        <!--<![endif]-->
+                    </object>
+                </div>
+
+                <h3>Author:<br /><br />Rahul Bethi</h3>
+
+
+
+                <br /><br /><br />
+
+
+
+
+
+                <h3>Objective:</h3>
+
+
+                <ul>
+
+                    <li>The objective of the game is to eat all the dots adn power-ups.</li>
+
+                    <li>Enemies try to kill the PacMan. Different colored enemies have different behaviour.</li>
+
+                    <li>Eating a power-up will dissable all enemies, and makes them go slowly in random.</li>
+
+                    <li>Enemies can be eaten when they are dissabled state, for extra points. Enemies then goto their home and reset.</li>
+
+                    <li>If the pacman looses all the lives, hen the game is over.</li>
+                    
+                    <li>There is a wrap zone in the middle of the map on left and right.</li>
+
+
+                </ul>
+
+                <br /><br />
+                
+                <h3>Objective:</h3>
+
+
+                <ul>
+
+                    <li>Move the pac-man in all four directions using the respective arrow keys.</li>
+
+
+                </ul>
+
+                <br /><br />
+
+
+                <h3>Logic Design and Implementation:</h3> 
+
+                <ul>
+                    <li>Create the level bitmap. It contains all elements (walls, dots, powerups). It also contans information about junctions.</li>
+
+                    <li>Create movement logic, so that it will check the level bitmap for junctions and changes direction if possible in the next junction.</li>
+
+                    <li>Create movement logic for enemies. At every junction, enemies determine in which direction the player is and acts accordingly.</li>
+
+                    <li>Create four different logics for four different enemies.</li>
+                    
+                    <ul>
+                        <li>Red enemy is more aggressive. it will try to catch pacman most of the time.</li>
+                        
+                        <li>Blue enemy sometimes changes direction. Tt only checks half of the level for player.</li>
+                        
+                        <li>Pink enemy checks radius around it for player. Tt gives up chase after sometime and resumes.</li>
+                        
+                        <li>Orange tries to stay away from the player. It attacks only when player is very close to it.</li>
+                        
+                    </ul>
+
+                    <li>Create variables to hold the score and lives of pac-man.</li>
+
+                    <li>Create logics to determine when the game is over and display it on the screen.</li>
+                    
+                    <li>Integrate audio into the game, and also a mute button to mute the audio.</li>
+
+                </ul></ul></ul>
+
+        </p>
+
+
+
+
+
+</div> 
+
+
+
+<!--content-->
+
+
+
+
+
+
+
+</div> <!-- Container ends here -->
+
+
+
+
+
+
+
+<!--  Footer -->
+
+
+
+
+
+
+
+<div id="info-site">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

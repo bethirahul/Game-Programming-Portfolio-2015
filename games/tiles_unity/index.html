@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+
+
+
+
+
+
+    <head>
+
+
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> <!--iso-8859-1" />-->
+
+
+
+        <meta http-equiv="Content-Language" content="en-us" />
+
+
+
+
+
+
+
+        <meta name = "author" content="Aiga"/>
+
+        <meta name ="copyright" content="&copy; 2010 AIGA "/> 
+
+        <meta name="description" content="AIGA - Student Portfolio" />
+
+        <meta name="keywords" content="AIGA - Student Portfolio; " />
+
+        <meta name="robots" content="index,follow" />
+
+        <meta http-equiv="expires" content="Fri, 26 Feb 2001 09:23:47 GMT"/> 
+
+
+
+        <title>Tiles | Rahul Bethi</title>
+
+
+
+        <link href="layout.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+
+    </head>
+
+
+
+
+
+
+
+    <body>
+
+
+
+
+
+        <div id="AigaMasthead">
+
+        </div>
+
+
+
+        <div id="container">
+
+
+
+            <div id="content"> 
+                
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 600, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+			
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen  = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "tiles_unity.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		body {
+			font-family: Helvetica, Verdana, Arial, sans-serif;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+		a:link, a:visited {
+			color: #bfbfbf;
+		}
+		a:active, a:hover {
+			color: #bfbfbf;
+		}
+		p.header {
+			font-size: small;
+		}
+		p.header span {
+			font-weight: bold;
+		}
+		p.footer {
+			font-size: x-small;
+		}
+		div.content {
+			margin: auto;
+			width: 600px;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 600px;
+			width: 600px;
+		}
+		-->
+		</style>
+	</head>
+	<body>
+		<p class="header"><span>Tiles | </span>Rahul Bethi</p>
+		<div class="content">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+	</body>
+            <h3>Author:<br /><br />Rahul Bethi</h3>
+
+
+
+            <br /><br /><br />
+
+
+
+
+
+            <h3>Objective:</h3>
+
+
+            <ul>
+
+                <li>The objective of the game is to arrange all tiles in an order by moving them.</li>
+
+                <li>The tile which is adjacent to the empy space can be moved into the empty space.</li>
+
+                <li>Timer will start counting as soon as the game starts, so to count the time taken to think into consideration.</li>
+
+                <li>Tiles can only move horizontally or vertically, but not in diagonal.</li>
+
+
+            </ul>
+
+            <br /><br />
+            
+            <h3>How To Play:</h3>
+
+
+            <ul>
+
+                <li>Click a tile which is adjacent to the empty space, for the tile to move into the empty space.</li>
+
+
+            </ul>
+
+            <br /><br />
+
+
+            <h3>Logic Design and Implementation:</h3> 
+
+            <ul>
+                <li>Create main menu. Create an input text field to input the number of rows or columns.</li>
+                
+                <li>Create 'input x input' number of tiles, and make the last tile blank. All the tiles work as buttons.</li>
+
+                <li>Move the tiles in random many times to scramble. This method ensures that the pattern is solvable.</li>
+
+                <li>Create movement logic, such that on pressing the tile beside the empty space gets swaped with the empty space.</li>
+
+                <li>Create variables to hold the time taken and the number of moves made to solve the game.</li>
+
+                <li>Create logics to determine when the game is over and display it on the screen.</li>
+                
+                <li>Integrate audio for clicks and tiles movement and for Game Over.</li>
+
+            </ul></ul></ul>
+
+    </p>
+
+<br /><br /></br>
+
+<h3>Scope for improvement:</h3>
+
+<ul><li>Use square pieces of a picture instead of numbers on the tiles.</ul>
+
+
+</div> 
+
+
+
+<!--content-->
+
+
+
+
+
+
+
+</div> <!-- Container ends here -->
+
+
+
+
+
+
+
+<!--  Footer -->
+
+
+
+
+
+
+
+<div id="info-site">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
